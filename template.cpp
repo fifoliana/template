@@ -19,11 +19,54 @@ void	print(T cont)
 	cout << endl;
 }
 
+string ltrim(const string &str) {
+    string s(str);
+
+    s.erase(
+        s.begin(),
+        find_if(s.begin(), s.end(), not_fn(ptr_fun<int, int>(isspace)))
+    );
+
+    return s;
+}
+
+string rtrim(const string &str) {
+    string s(str);
+
+    s.erase(
+        find_if(s.rbegin(), s.rend(), not_fn(ptr_fun<int, int>(isspace))).base(),
+        s.end()
+    );
+
+    return s;
+}
+
+vector<string> split(const string &str, string del = " ") {
+    vector<string> tokens;
+
+    string::size_type start = 0;
+    string::size_type end = 0;
+
+    while ((end = str.find(del, start)) != string::npos) {
+
+		string res = str.substr(start, end - start);
+		// if (res != "")
+        tokens.push_back(res);
+
+        start = end + 1;
+    }
+
+    tokens.push_back(str.substr(start));
+
+    return tokens;
+}
+
+
+
 void solve()
 {
 	
 }
-
 
 int main(void)
 {
@@ -33,7 +76,7 @@ int main(void)
 	cin >> t;
 	for (int o = 0; o < t; ++o)
 	{
-		solve();	
+		solve();
 	}
 	return 0;
 }
