@@ -4,6 +4,21 @@ using namespace std;
 
 typedef long long ll;
 
+template <typename T>
+void	print(T cont)
+{
+	bool	w = false;
+	for (typename T::iterator it = cont.begin(); it != cont.end(); ++it)
+	{
+		if (w)
+			cout << " ";
+		else
+			w = true;
+		cout << *it;
+	}
+	cout << endl;
+}
+
 void solve()
 {
 	
