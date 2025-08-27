@@ -19,12 +19,17 @@ void	print(T cont)
 	cout << endl;
 }
 
+bool isnotspace(int c)
+{
+	return (!isspace(c));
+}
+
 string ltrim(const string &str) {
     string s(str);
 
     s.erase(
         s.begin(),
-        find_if(s.begin(), s.end(), not_fn(ptr_fun<int, int>(isspace)))
+        find_if(s.begin(), s.end(), isnotspace)
     );
 
     return s;
@@ -34,7 +39,7 @@ string rtrim(const string &str) {
     string s(str);
 
     s.erase(
-        find_if(s.rbegin(), s.rend(), not_fn(ptr_fun<int, int>(isspace))).base(),
+        find_if(s.rbegin(), s.rend(), isnotspace).base(),
         s.end()
     );
 
