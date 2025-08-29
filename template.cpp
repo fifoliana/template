@@ -84,6 +84,14 @@ string stolower(string const & s)
 	return (u);
 }
 
+void	parse_time(string t, int & h, int & m, int & s)
+{
+	vector<string>	v = split(t, ":");
+	h = stoi(v[0]);
+	m = stoi(v[1]);
+	s = stoi(v[2]);
+}
+
 void solve()
 {
 	
