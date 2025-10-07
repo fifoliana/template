@@ -7,7 +7,7 @@ vector<int> v = {10, 10, 10, 20, 20, 20, 30, 30};
 // lower_bound : find the first position in which val could be inserted without changing the ordering
 vector<int>::iterator low = lower_bound(v.begin(), v.end(), 20);
 
-// upper_bound : find the first position in which val could be inserted without changing the ordering
+// upper_bound : find the last position in which val could be inserted without changing the ordering
 vector<int>::iterator up = upper_bound(v.begin(), v.end(), 20);
 
 // binary search
@@ -67,7 +67,7 @@ int search(vector<int>& nums, int target) {
 		}
 	}
 	
-	if (left < nums.size() and nums[left] == target) {
+	if (left < nums.size() && nums[left] == target) {
 		return left;
 	} else {
 		return -1;
