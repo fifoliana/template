@@ -1,8 +1,11 @@
 #include <bits/stdc++.h>
 
+#define debug(x) #x << " = " << x << "\n"
+
 using namespace std;
 
 typedef long long ll;
+
 
 struct custom_hash {
 	static uint64_t splitmix64(uint64_t x) {
@@ -21,18 +24,18 @@ struct custom_hash {
 // unordered_map<int, pair<int,int>, custom_hash>
 
 template <typename T>
-void	print(T cont)
+void	print(T cont, ostream & os)
 {
 	bool	w = false;
 	for (typename T::iterator it = cont.begin(); it != cont.end(); ++it)
 	{
 		if (w)
-			cout << " ";
+			os << " ";
 		else
 			w = true;
-		cout << *it;
+		os << *it;
 	}
-	cout << endl;
+	os << endl;
 }
 
 bool isnotspace(int c)
