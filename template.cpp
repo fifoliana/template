@@ -1,12 +1,10 @@
 #include <bits/stdc++.h>
 
-
 using namespace std;
 
 typedef long long ll;
 
 #define endl "\n";
-
 #define debug(x) cerr << #x << " = " << x << "\n"
 
 struct custom_hash {
@@ -111,6 +109,26 @@ void	parse_time(string t, int & h, int & m, int & s)
 	h = stoi(v[0]);
 	m = stoi(v[1]);
 	s = stoi(v[2]);
+}
+
+// p is the result of sieve of erat. (p[i] == true if i is prime, else false), primes is list of primes
+void get_divisors (ll n, unordered_set<ll,custom_hash> & div, vector<ll> & primes, vector<bool> & p)
+{
+	for (int j = 0; j < (int)primes.size() && primes[j] * primes[j] <= n; ++j)
+	{
+		if (n % primes[j] == 0)
+		{
+			div.insert(primes[j]);
+			while (n % primes[j] == 0)
+			{
+				n /= primes[j];
+			}
+			if (p[n])
+			{
+				div.insert(n);
+			}
+		}
+	}
 }
 
 void solve()
