@@ -138,7 +138,7 @@ void solve()
 
 int main(void)
 {
-	bool solved = true; 
+	bool solved = false; 
 	(void) solved;
 	
 	ios_base::sync_with_stdio(0); cin.tie(0);
