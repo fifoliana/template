@@ -44,45 +44,45 @@ bool isnotspace(int c)
 }
 
 string ltrim(const string &str) {
-    string s(str);
+	string s(str);
 
-    s.erase(
-        s.begin(),
-        find_if(s.begin(), s.end(), isnotspace)
-    );
+	s.erase(
+		s.begin(),
+		find_if(s.begin(), s.end(), isnotspace)
+	);
 
-    return s;
+	return s;
 }
 
 string rtrim(const string &str) {
-    string s(str);
+	string s(str);
 
-    s.erase(
-        find_if(s.rbegin(), s.rend(), isnotspace).base(),
-        s.end()
-    );
+	s.erase(
+		find_if(s.rbegin(), s.rend(), isnotspace).base(),
+		s.end()
+	);
 
-    return s;
+	return s;
 }
 
 vector<string> split(const string &str, string del = " ") {
-    vector<string> tokens;
+	vector<string> tokens;
 
-    string::size_type start = 0;
-    string::size_type end = 0;
+	string::size_type start = 0;
+	string::size_type end = 0;
 
-    while ((end = str.find(del, start)) != string::npos) {
+	while ((end = str.find(del, start)) != string::npos) {
 
 		string res = str.substr(start, end - start);
 		// if (res != "")
-        tokens.push_back(res);
+		tokens.push_back(res);
 
-        start = end + 1;
-    }
+		start = end + 1;
+	}
 
-    tokens.push_back(str.substr(start));
+	tokens.push_back(str.substr(start));
 
-    return tokens;
+	return tokens;
 }
 
 string stoupper(string const & s)
