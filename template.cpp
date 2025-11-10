@@ -4,7 +4,7 @@ using namespace std;
 
 typedef long long ll;
 
-#define endl "\n";
+#define endl "\n"
 #define debug(x) cerr << #x << " = " << x << "\n"
 
 struct custom_hash {
@@ -117,7 +117,7 @@ void	parse_time(string t, int & h, int & m, int & s)
 }
 
 // p is the result of sieve of erat. (p[i] == true if i is prime, else false), primes is list of primes
-void get_divisors (ll n, unordered_set<ll,custom_hash> & div, vector<ll> & primes, vector<bool> & p)
+void get_prime_divisors (ll n, unordered_set<ll,custom_hash> & div, vector<ll> & primes, vector<bool> & p)
 {
 	for (int j = 0; j < (int)primes.size() && primes[j] * primes[j] <= n; ++j)
 	{
@@ -138,7 +138,7 @@ void get_divisors (ll n, unordered_set<ll,custom_hash> & div, vector<ll> & prime
 
 void solve()
 {
-	
+
 }
 
 int main(void)
@@ -149,6 +149,7 @@ int main(void)
 	ios_base::sync_with_stdio(0); cin.tie(0);
 	int t;
 
+	t = 1;
 	cin >> t;
 	for (int o = 0; o < t; ++o)
 	{
