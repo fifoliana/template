@@ -35,7 +35,6 @@ ll pow(ll a, ll b)
 
 ll sqrt(ll a)
 {
-	cout << "call" << endl;
 	ll res = sqrtl(a);
 
 	while (res * res < a) ++res;
