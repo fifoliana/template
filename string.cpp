@@ -2,21 +2,6 @@
 
 using namespace std;
 
-template <typename T>
-void	print(T cont, ostream & os)
-{
-	bool	w = false;
-	for (typename T::iterator it = cont.begin(); it != cont.end(); ++it)
-	{
-		if (w)
-			os << " ";
-		else
-			w = true;
-		os << *it;
-	}
-	os << endl;
-}
-
 bool isnotspace(int c)
 {
 	return (!isspace(c));
