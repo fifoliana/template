@@ -1,11 +1,17 @@
 #include <bits/stdc++.h>
 
+#ifdef LOCAL
+#include "template/debug.hpp"
+#else
+#define debug(...)
+#define debugArr(...)
+#endif
+
 using namespace std;
 
 typedef long long ll;
 
 #define endl "\n"
-#define debug(x) cerr << #x << " = " << x << "\n"
 
 struct custom_hash {
 	static uint64_t splitmix64(uint64_t x) {
