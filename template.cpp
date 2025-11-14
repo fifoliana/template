@@ -1,16 +1,15 @@
 #include <bits/stdc++.h>
 
 #ifdef LOCAL
-#include "template/debug.hpp"
+# include "template/debug.hpp"
 #else
-#define debug(...)
-#define debugArr(...)
+# define debug(...)
+# define debugArr(...)
 #endif
 
 using namespace std;
 
 typedef long long ll;
-
 #define endl "\n"
 
 struct custom_hash {
@@ -33,21 +32,6 @@ struct custom_hash {
 };
 
 // unordered_map<int, pair<int,int>, custom_hash>
-
-template <typename T>
-void	print(T cont, ostream & os)
-{
-	bool	w = false;
-	for (typename T::iterator it = cont.begin(); it != cont.end(); ++it)
-	{
-		if (w)
-			os << " ";
-		else
-			w = true;
-		os << *it;
-	}
-	os << endl;
-}
 
 ll pow(ll a, ll b)
 {
