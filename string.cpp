@@ -43,7 +43,7 @@ vector<string> split(const string &str, string del = " ") {
 
 		start = end + 1;
 	}
-
+	// if (str.substr(start) != "")
 	tokens.push_back(str.substr(start));
 
 	return tokens;
