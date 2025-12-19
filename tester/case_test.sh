@@ -1,8 +1,8 @@
 set -e # stop the script when a command (line) fails
 
-gen_src = gen.cpp
-brute_src = brute.cpp
-code_src = code.cpp
+gen_src=gen.cpp
+brute_src=brute.cpp
+code_src=code.cpp
 
 g++ $code_src -o code
 g++ $gen_src -o gen
