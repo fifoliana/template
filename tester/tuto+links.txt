@@ -1,0 +1,17 @@
+for a unique possible solution :
+		- write your code
+		- write a brute force solution that is always true
+		- write the input generator
+		- execute case_test.sh
+
+for multiple possible solution :
+		- write your code
+		- write a brute force solution that is always true
+		- write a cheker that test your solution, (it will read the input, your coded solution and the brute force using fstream), sometimes comparing with the brute force solution is not necessary, sometimes it is
+		- write the input generator
+		- execute case_test.sh
+
+it's better to test small test cases
+
+https://www.youtube.com/watch?v=JXTVOyQpSGM
+https://ali-ibrahim137.github.io/competitive/programming/2020/08/23/Stress-Testing.html
