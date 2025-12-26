@@ -1,3 +1,3 @@
 to add to ~/.bashrc or ~/.zshrc
 
-alias cw="c++ -O2 -Wall -Wextra -Werror -Wshadow -std=c++20 -g -D LOCAL"
+alias cw="c++ -O2 -Wall -Wextra -Werror -Wshadow -Wduplicated-cond -Wlogical-op -std=c++20 -g -D LOCAL"
