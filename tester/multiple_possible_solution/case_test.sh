@@ -5,9 +5,13 @@ brute_src=2180C_brute.cpp
 code_src=2180C_upsolve_but_high_rated.cpp
 checker=checker.cpp
 
+echo "compilation ..."
 g++ $code_src -o code
+echo "compilation ..."
 g++ $gen_src -o gen
+echo "compilation ..."
 g++ $brute_src -o brute
+echo "compilation ..."
 g++ $checker -o checker
 
 for((i = 1; ; ++i)); do

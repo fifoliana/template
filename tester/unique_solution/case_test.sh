@@ -4,8 +4,11 @@ gen_src=gen.cpp
 brute_src=brute.cpp
 code_src=code.cpp
 
+echo "compilation ..."
 g++ $code_src -o code
+echo "compilation ..."
 g++ $gen_src -o gen
+echo "compilation ..."
 g++ $brute_src -o brute
 
 for((i = 1; ; ++i)); do
